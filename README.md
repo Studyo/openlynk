@@ -1,4 +1,8 @@
-# Openlynk Specification
+# Openlynk Technical Specification
+
+This document aims to complement the [Openlynk reference document](https://docs.google.com/document/d/1eoX1TJfKU9gGaS7c8_BNc7bdBoHmqdwM7osnl806Va0/edit?usp=sharing). They should eventually either merged into one document, or enforce a technical vs agreement theme.
+
+This is the first draft of the spec, using a terse bullet-list format instead of prose to get the main ideas on paper. Also, Studyo is referred explicitely in certain cases.
 
 ## URLs
 
