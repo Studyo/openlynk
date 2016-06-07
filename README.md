@@ -4,10 +4,10 @@ This document aims to complement the [Openlynk reference document](https://docs.
 
 This is the first draft of the spec, using a terse bullet-list format instead of prose to get the main ideas on paper. Also, Studyo is referred explicitely in certain cases.
 
-## URLs
+## Pasted URLs with auto-format
 
-* It's all about URLs.
-* Studyo tasks can have links to external resources.
+* All resources defined in Openlynk end up as URLs with a representation embedded in the host
+* i.e. Studyo tasks can have links to external resources (URLs)
 * These links are presented in a nicely formatted button, which can either be an icon and title extracted from the resource or an embedded view of the resource.
 * The icon/title or embedded view are determined from these sources, in order of precedence:
     1. Openlynk meta tags
@@ -132,3 +132,11 @@ window.location.assign(callbackUrl + "?" + $.param(resource));
 * If the provider has both a native iOS app and a webapp, the agreed-upon link _should_ be a [Universal Link](https://developer.apple.com/library/ios/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12).
     * In that case, when the host is runnning on iOS and the native host app is installed on the iOS device, the native picker will be displayed.
     * If the host app is not installed, the web picker will be displayed.
+
+## Host pickers
+
+To be defined later
+
+## Back-end implementations
+
+To be defined later
