@@ -4,6 +4,10 @@ This document aims to complement the [Openlynk reference document](https://docs.
 
 This is the first draft of the spec, using a terse bullet-list format instead of prose to get the main ideas on paper. Also, Studyo is referred explicitely in certain cases.
 
+## Feedback
+
+This spec is not set in stone yet and feedback is more than welcome. Comments and suggestions can be submitted and discussed via [Github Issues](https://github.com/Studyo/openlynk/issues), and edits can be suggested via pull requests.
+
 ## Pasted URLs with auto-format
 
 * All resources defined in Openlynk end up as URLs with a representation embedded in the host
