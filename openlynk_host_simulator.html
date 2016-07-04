@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Openlynk Host Simulator</title>
+</head>
+<body>
+  <h1>Openlynk Host Simulator</h1>
+  <p>
+    <a id="pickerButton" href="#">Click here to select an <i>Acme Learning</i> activity.</a><br/>
+    <a id="pickerWPButton" href="#">Click here to select a <i>Wordpress</i> article.</a>
+  </p>
+  <p id="pickResult"></p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <script type="text/javascript">
+
+    function handleMessage(event) {
+      console.log(event.data);
+      if (event.data.type === 'StudyoPicker_PickedResource') {
+        var resource = event.data.resource;
+        $("#pickResult").html("You picked this URL: ");
+        $("#pickResult").append("<a href='" + resource.url + "'>" + resource.title + "</a>");
+      }
+    }
+
+    $(document).ready(function() {
+      $("#pickerButton").click(function() {
+        var picker = window.open("https://acme-learning.herokuapp.com/studyo-picker?callbackType=postMessage", "StudyoPicker", "modal,chrome,alwaysRaised,left=300,top=300,width=300,height=300,centerscreen");
+        window.addEventListener("message", handleMessage, false);
+      });
+      $("#pickerWPButton").click(function() {
+        var picker = window.open("http://www-staging.studyo.co/picker?callbackType=postMessage", "StudyoPicker", "modal,chrome,alwaysRaised,left=300,top=300,width=300,height=300,centerscreen");
+        window.addEventListener("message", handleMessage, false);
+      });
+    });
+
+  </script>
+</body>
+</html>
