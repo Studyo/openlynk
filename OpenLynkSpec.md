@@ -10,8 +10,8 @@ This spec is not set in stone yet and feedback is more than welcome. Comments an
 
 ## Pasted URLs with auto-format
 
-* All resources defined in Openlynk end up as URLs with a representation embedded in the host
-* i.e. Studyo tasks can have links to external resources (URLs)
+* All resources defined in Openlynk end up as URLs with a representation embedded in the host.
+* i.e. Studyo tasks can have links to external resources (URLs).
 * These links are presented in a nicely formatted button, which can either be an icon and title extracted from the resource or an embedded view of the resource.
 * The icon/title or embedded view are determined from these sources, in order of precedence:
     1. Openlynk meta tags
@@ -68,19 +68,19 @@ If no metadata of any sort is found on the resource page, either because the pro
 
 If a link points to a domain that is not part of this agreement, therefore has no predefined icon and title, the host _may_ opt to use the provider's icon and name on a case-by-case basis. If not, it will fall back to using the `<title>` and _favicon_ of the page, which can be one of:
 
-* The value of the `<link rel="icon">` tag in the `<head>` of the page
-* The value of the `<link rel="apple-touch-icon">` tag in the `<head>` of the page
-* The image located at the `/favicon` location on the resource host
+* The value of the `<link rel="icon">` tag in the `<head>` of the page.
+* The value of the `<link rel="apple-touch-icon">` tag in the `<head>` of the page.
+* The image located at the `/favicon` location on the resource host.
 
 ## Openlynk Resource Picker
 
 * As mentioned above: it's all about URLs.
 * So simply pasting a URL is enough to create a branded button inside a Studyo task.
 * But to simplify the process of adding a URL to a task, the provider can implement a _picker_ UI.
-* When a provider implements a picker, it will show up in Studyo's list of supported providers (e.g. _Attach a ChallengeU activity_)
+* When a provider implements a picker, it will show up in Studyo's list of supported providers (e.g. _Attach a ChallengeU activity_).
 * The UI of the picker is implemented by the provider using HTML, CSS and JavaScript.
 * Studyo will display the picker in a popup/modal window.
-* Studyo will navigate to an agreed-upon URL for the picker (e.g. `http://netmath.com/services/openlynk/picker`)
+* Studyo will navigate to an agreed-upon URL for the picker (e.g. `http://netmath.com/services/openlynk/picker`).
 * If the provider requires authentication and there is no active browser session, a login UI should be displayed first.
 * The provider should implement a UI flow that is appropriate for its type of content (multi-level hierarchical navigation, topic selection, etc).
 * Once a resource is selected by the user, the picker must return the URL and some metadata to the host using the mechanisms documented below.
